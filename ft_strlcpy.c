@@ -6,7 +6,7 @@
 /*   By: saoki <saoki@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 16:48:06 by saoki             #+#    #+#             */
-/*   Updated: 2020/11/04 23:12:53 by saoki            ###   ########.fr       */
+/*   Updated: 2020/11/28 00:00:52 by saoki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,17 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	size_t	i;
 
+	if (src == NULL || dest == NULL)
+		return (0);
 	i = 0;
-	if (size == 0)
+	if (size != 0)
 	{
-		while (src[i])
+		while (i < size - 1 && src[i])
+		{
+			dest[i] = src[i];
 			i++;
-		return (i);
+		}	
+		dest[i] = '\0';
 	}
-	while (i < size - 1 && src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	while (src[i])
-		i++;
-	return (i);
+	return (ft_strlen(src));
 }
