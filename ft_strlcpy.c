@@ -6,7 +6,7 @@
 /*   By: saoki <saoki@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 16:48:06 by saoki             #+#    #+#             */
-/*   Updated: 2020/11/28 00:00:52 by saoki            ###   ########.fr       */
+/*   Updated: 2020/11/28 00:27:35 by saoki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 		{
 			dest[i] = src[i];
 			i++;
-		}	
+		}
 		dest[i] = '\0';
 	}
 	return (ft_strlen(src));
